@@ -174,9 +174,12 @@ end
 # edit case lines to match os 
 function prompt_os -d "Displays the OS icon"
   set -l distro (sed -n '2 s/\\([^"]*\\)\\(.*\\)/\\2/p' /etc/*-release)
-  switch $distro
+  switch $distro  # to get the case paste  sed -n '2 s/\\([^"]*\\)\\(.*\\)/\\2/p' /etc/*-release  into terminal
     case '"Linux"'
         set os_icon \ue712
+    case '"Debian GNU/Linux"'
+        set os_icon \uf306
+        set os_clr brred
     case '"Arch"'
         set os_icon \ue712
     case '"Raspbian GNU/Linux"'
