@@ -99,6 +99,7 @@ set -g __fish_git_prompt_showupstream "informative"
 # ===========================
 # Subversion settings
 
+set -q fish_prompt_pwd_dir_length; or set fish_prompt_pwd_dir_length 0
 set -q theme_svn_prompt_enabled; or set theme_svn_prompt_enabled no
 
 # ===========================
